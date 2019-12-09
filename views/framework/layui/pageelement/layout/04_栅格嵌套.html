@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>栅格嵌套</title>
+    <link rel="stylesheet" href="../../../../../static/layui/css/layui.css">
+  </head>
+<body>
+<div class="layui-row layui-col-space5">
+  <div class="layui-col-md5">
+    <div class="layui-row bk1">
+      <div class="layui-col-md3 bk2">
+        内部列
+      </div>
+      <div class="layui-col-md9 bk3">
+        内部列
+      </div>
+      <div class="layui-col-md12 bk4">
+        内部列
+      </div>
+    </div>
+  </div>
+  <div class="layui-col-md7">
+    <div class="layui-row bk1">
+      <div class="layui-col-md12 bk2">
+        内部列
+      </div>
+      <div class="layui-col-md9 bk3">
+        内部列
+      </div>
+      <div class="layui-col-md3 bk4">
+        内部列
+      </div>
+    </div>
+  </div>
+</div>
+
+<style type="text/css">
+/* col-md4 下必须有section 或 div 包围，否则颜色不生效 */
+  .bk1{
+    padding: 10px;
+    background: #63BA79;
+  }
+  .bk2{
+    background: #79C48C;
+  }
+  .bk3{
+    background: #49A761;
+  }
+  .bk4{
+    background: #38814A;
+  }
+</style>
+</body>
+</html>

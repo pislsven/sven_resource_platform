@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  <link rel="stylesheet" href="../../../../static/layui/css/layui.css">
+  <script src="../../../../static/layui/layui.js"></script>
+</head>
+<body>
+    <h1>layui 默认在当前目录下查找 模块 js 文件</h1>
+<script>
+
+//使用拓展模块
+layui.use(['hellomod'], function(){
+  var mymod = layui.hellomod  
+  mymod.hello('World!'); //弹出 Hello World!
+});
+
+</script>
+</body>
+</html>

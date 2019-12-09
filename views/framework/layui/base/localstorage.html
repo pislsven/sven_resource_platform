@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>localstorage</title>
+  <link rel="stylesheet" href="../../../../static/layui/css/layui.css">
+  <script src="../../../../static/layui/layui.js"></script>
+  <script src="../../../../static/util/sleep.js"></script>
+</head>
+<body>
+<script>
+//【增】：向 test 表插入一个 nickname 字段，如果该表不存在，则自动建立。
+layui.data('test', {
+  key: 'nickname',
+  value: '贤心'
+})
+//【查】：向 test 表读取全部的数据
+var localTest = layui.data('test');
+console.log(localTest.nickname); //获得“贤心”
+
+sleep(3000).then(function(){
+  console.log("finish 3s")
+
+  // 改
+  layui.data('test', {
+    key: 'nickname2',
+    value: '贤心2'
+  })
+
+  //【查】：向 test 表读取全部的数据
+  var localTest = layui.data('test');
+  console.log(localTest.nickname2); //获得“贤心”
+})
+
+console.log("并行执行")
+
+
+</script>
+<script>
+
+
+
+</script>
+<script>
+// layui.use(['layer', 'form'], function(){
+//   var layer = layui.layer
+//   form = layui.form
+//   layer.msg('Hello World')
+// }); 
+
+
+ 
+//【删】：删除 test 表的 nickname 字段
+layui.data('test', {
+  key: 'nickname',
+  remove: true
+});
+layui.data('test', null); //删除test表
+  
+//【改】：同【增】，会覆盖已经存储的数据
+
+
+
+</script>
+<script>
+
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  <link rel="stylesheet" href="../../../../static/layui/css/layui.css">
+  <script src="../../../../static/layui/layui.js"></script>
+  <script src="config4.js"></script>
+</head>
+<body>
+  <h1>layui 默认在当前目录下查找模块 js 文件, 直接应用js 会找不到目录<br>解决方式引用配置文件，指向模块js</h1>
+  <h1>配置文件 采用base方式 相对路径的省略方式</h1>
+  <h1>但模块js文件名称可以与引用不一致，但export导出名称必须一致</h1>
+<script>
+
+//使用拓展模块
+layui.use(['jmod'], function(){
+  var mymod = layui.jmod  
+  mymod.joke('World!'); //弹出 Hello World!
+});
+
+</script>
+</body>
+</html>
