@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>动画示例</title>
+    <link rel="stylesheet" href="../../../../../static/layui/css/layui.css">
+    <!-- <script src="../../../../../static/layui/layui.js"></!-->
+  </head>
+<body>
+    <!-- 其中 layui-anim 是必须的，后面跟着的即是不同的动画类
+    <div class="layui-anim layui-anim-up"></div>
+     
+    循环动画，追加：layui-anim-loop
+    <div class="layui-anim layui-anim-up layui-anim-loop">？</div> -->
+
+    <ul class="site-doc-icon site-doc-anim">
+      <li>
+        <div class="layui-anim" data-anim="layui-anim-rotate layui-anim-loop" onclick="toggle(this)">
+          循环动画
+        </div>
+      </li>
+    </ul>
+<script>
+  function toggle(obj){
+    const anims = obj.dataset.anim.split(' ')
+    if (obj.classList.contains(anims[0])){
+      anims.forEach((e) => {
+        obj.classList.remove(e)
+      })     
+    }else{
+      anims.forEach((e) => {
+        obj.classList.add(e)
+      })
+    }
+  }
+</script>
+<style type="text/css">
+.site-doc-icon li .layui-anim {
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    margin: 0 auto 10px;
+    text-align: center;
+    background-color: #009688;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 50%;
+}
+.layui-anim {
+    -webkit-animation-duration: .3s;
+    animation-duration: .3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.layui-anim-rotate {
+    -webkit-animation-name: layui-rotate;
+    animation-name: layui-rotate;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+</style>
+</body>
+</html>
