@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>导航</title>
+    <link rel="stylesheet" href="../../../../../static/layui/css/layui.css">
+    <script src="../../../../../static/layui/layui.js"></script>
+  </head>
+<body>
+    <ul class="layui-nav" lay-filter="">
+        <li class="layui-nav-item"><a href="">最新活动</a></li>
+        <li class="layui-nav-item layui-this"><a href="">产品</a></li>
+        <li class="layui-nav-item"><a href="">大数据</a></li>
+        <li class="layui-nav-item">
+          <a href="javascript:;">解决方案</a>
+          <dl class="layui-nav-child"> <!-- 二级菜单 -->
+            <dd><a href="">移动模块</a></dd>
+            <dd><a href="">后台模版</a></dd>
+            <dd><a href="">电商平台</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item"><a href="">社区</a></li>
+      </ul>
+       
+    <hr>
+    导航中其他元素
+    <ul class="layui-nav">
+      <li class="layui-nav-item">
+        <a href="">控制台<span class="layui-badge">9</span></a>
+      </li>
+      <li class="layui-nav-item">
+        <a href="">个人中心<span class="layui-badge-dot"></span></a>
+      </li>
+      <li class="layui-nav-item">
+        <a href=""><img src="http://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" class="layui-nav-img">我</a>
+        <dl class="layui-nav-child">
+          <dd><a href="javascript:;">修改信息</a></dd>
+          <dd><a href="javascript:;">安全管理</a></dd>
+          <dd><a href="javascript:;">退了</a></dd>
+        </dl>
+      </li>
+    </ul>
+
+    <hr>
+    导航主题
+    如定义一个墨绿背景色的导航
+    <ul class="layui-nav layui-bg-green" lay-filter="">
+      <li class="layui-nav-item">
+        <a href="">控制台<span class="layui-badge">9</span></a>
+      </li>
+      <li class="layui-nav-item">
+        <a href="">个人中心<span class="layui-badge-dot"></span></a>
+      </li>
+      <li class="layui-nav-item">
+        <a href=""><img src="http://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" class="layui-nav-img">我</a>
+        <dl class="layui-nav-child">
+          <dd><a href="javascript:;">修改信息</a></dd>
+          <dd><a href="javascript:;">安全管理</a></dd>
+          <dd><a href="javascript:;">退了</a></dd>
+        </dl>
+      </li>
+    </ul>  
+    水平导航支持的其它背景主题有：layui-bg-cyan（藏青）、layui-bg-molv（墨绿）、layui-bg-blue（艳蓝）
+    垂直导航支持的其它背景主题有：layui-bg-cyan（藏青）
+
+    <hr>
+    垂直导航
+    <ul class="layui-nav layui-nav-tree" lay-filter="test">
+    <!-- 侧边导航: <ul class="layui-nav layui-nav-tree layui-nav-side"> -->
+      <li class="layui-nav-item layui-nav-itemed">
+        <a href="javascript:;">默认展开</a>
+        <dl class="layui-nav-child">
+          <dd><a href="javascript:;">选项1</a></dd>
+          <dd><a href="javascript:;">选项2</a></dd>
+          <dd><a href="">跳转</a></dd>
+        </dl>
+      </li>
+      <li class="layui-nav-item">
+        <a href="javascript:;">解决方案</a>
+        <dl class="layui-nav-child">
+          <dd><a href="">移动模块</a></dd>
+          <dd><a href="">后台模版</a></dd>
+          <dd><a href="">电商平台</a></dd>
+        </dl>
+      </li>
+      <li class="layui-nav-item"><a href="">产品</a></li>
+      <li class="layui-nav-item"><a href="">大数据</a></li>
+    </ul>
+
+  <hr>
+  面包屑
+  <span class="layui-breadcrumb">
+    <a href="">首页</a>
+    <a href="">国际新闻</a>
+    <a href="">亚太地区</a>
+    <a><cite>正文</cite></a>
+  </span>
+  <hr>
+  <span class="layui-breadcrumb" lay-separator="-">
+    <a href="">首页</a>
+    <a href="">国际新闻</a>
+    <a href="">亚太地区</a>
+    <a><cite>正文</cite></a>
+  </span>
+<script>
+  // 注意：导航 依赖 element 模块，否则无法进行功能性操作
+  layui.use('element', function() {
+  })
+</script>
+</body>
+</html>

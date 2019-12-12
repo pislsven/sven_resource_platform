@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="../../../../../static/util/pt.js"></script>
+  <title>数据类型</title>
+</head>
+<body>
+<script>
+  {
+    pt.Ptn("string 类型")
+
+    const carname1="Bill Gates"
+    const carname2='Bill Gates'
+    const answer1="Nice to meet you!"
+    const answer2="He is called 'Bill'"
+    const answer3='He is called "Bill"'
+
+    pt.Ptn(carname1)
+    pt.Ptn(carname2)
+    pt.Ptn(answer1)
+    pt.Ptn(answer2)
+    pt.Ptn(answer3)
+    pt.Ptn()
+  }
+  {
+    pt.Ptn("number 数字")
+
+    const x1=36.00;
+    const x2=36;
+    const y=123e5;
+    const z=123e-5;
+
+    pt.Ptn(x1)
+    pt.Ptn(x2)
+    pt.Ptn(y)
+    pt.Ptn(z)
+    pt.Ptn()
+  }
+  {
+    pt.Ptn("bool 布尔")
+
+    const x=true
+    const y=false
+    pt.Ptn(x)
+    pt.Ptn(y)
+    pt.Ptn()
+  }
+  {
+    pt.Ptn("array 数组")
+
+    const cars = new Array();
+    cars[0] = "Audi";
+    cars[1] = "BMW";
+    cars[2] = "Volvo";
+
+    for (let i=0;i<cars.length;i++)
+    {
+      pt.Ptn(cars[i])
+    }
+    pt.Ptn()
+  }
+  {
+    pt.Ptn("obj 对象")
+
+    const person={
+      firstname : "Bill",
+      lastname  : "Gates",
+      id        :  5566
+    };
+    pt.Ptn(person.lastname)
+    pt.Ptn(person["lastname"])
+    pt.Ptn()
+  }
+  {
+    pt.Ptn("undefine and null")
+
+    let person1
+    const car="Volvo"
+    pt.Ptn(person1)
+    pt.Ptn(car)
+    let car2=null
+    pt.Ptn(car2)
+  }
+  {
+    pt.Ptn("声明变量类型")
+    const carname=new String;
+    const x=      new Number;
+    const y=      new Boolean;
+    const cars=   new Array;
+    const person= new Object;
+  }
+</script>
+</body>
+</html>

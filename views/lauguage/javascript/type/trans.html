@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="../../../../static/util/pt.js"></script>
+  <title>转换功能</title>
+</head>
+<body>
+<script>
+  {
+    pt.Ptn("<h1>转换非数字</h1>")
+
+    const x = '2'
+    const y = true
+    const z = '-2'
+
+    pt.Ptn('x:', x)
+    pt.Ptn('y:', y)
+    pt.Ptn('z:', z)
+    pt.Ptn("转换后")
+    pt.Ptn('x number:', +x)
+    pt.Ptn('y number:', +y)
+    pt.Ptn('z number:', +z)
+  }
+</script>
+</body>
+</html>

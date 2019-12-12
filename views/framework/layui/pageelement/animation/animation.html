@@ -22,20 +22,24 @@
         </div>
       </li>
     </ul>
+
 <script>
-  function toggle(obj){
+  /* eslint-disable no-unused-vars */
+  function toggle(obj) {
     const anims = obj.dataset.anim.split(' ')
-    if (obj.classList.contains(anims[0])){
+    if (obj.classList.contains(anims[0])) {
       anims.forEach((e) => {
         obj.classList.remove(e)
-      })     
-    }else{
+      })
+    } else {
       anims.forEach((e) => {
         obj.classList.add(e)
       })
     }
   }
+  /* eslint-enable no-unused-vars */
 </script>
+
 <style type="text/css">
 .site-doc-icon li .layui-anim {
     width: 150px;

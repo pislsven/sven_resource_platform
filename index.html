@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="./static/local/css/admin.css" media="all">
   
   <script>
-  /^http(s*):\/\//.test(location.href) || alert('请先部署到 localhost 下再访问');
+  /^http(s*):\/\//.test(location.href) || alert('请先部署到 localhost 下再访问')
   </script>
 </head>
 <body class="layui-layout-bod../img/2019-12-05-16-59-40.pngy">
@@ -184,6 +184,35 @@
                   </dl>
                 </dd>
               </dl>
+            </li>
+            <li data-name="lauguage" class="layui-nav-item">
+              <a href="javascript:;" lay-tips="框架" lay-direction="2">
+                <i class="layui-icon layui-icon-read"></i>
+                <cite>开发语言</cite>
+              </a>
+              <dl class="layui-nav-child">
+                <a href="javascript:;">javascript</a>
+                <dl class="layui-nav-child">
+                  <dd>
+                    <a href="javascript:;">引入方式</a>
+                    <dl class="layui-nav-child">
+                      <a lay-href="views/lauguage/javascript/import/import.html">引入方式</a>
+                    </dl>
+                  </dd>
+                  <dd>
+                    <a href="javascript:;">类型</a>
+                    <dl class="layui-nav-child">
+                      <a lay-href="views/lauguage/javascript/type/overview.html">概述</a>
+                    </dl>
+                  </dd>
+                  <dd>
+                    <a href="javascript:;">元素</a>
+                    <dl class="layui-nav-child">
+                      <a lay-href="views/lauguage/javascript/type/overview.html">概述</a>
+                    </dl>
+                  </dd>                  
+                </dl>
+              </dl>   
             </li>
             <li data-name="component" class="layui-nav-item">
               <a href="javascript:;" lay-tips="组件" lay-direction="2">
@@ -543,24 +572,24 @@
   </div>
 
   <script src="./static/layui/layui.js"></script>
-  <script>
-  layui.config({
-    base: './static/' //静态资源所在路径
-  }).extend({
-    index: 'lib/index' //主入口模块
-  }).use('index');
-  </script>
+<script>
+layui.config({
+  base: './static/' // 静态资源所在路径
+}).extend({
+  index: 'lib/index' // 主入口模块
+}).use('index')
+</script>
   
   <!-- 百度统计 -->
-  <script>
-  var _hmt = _hmt || [];
-  (function() {
-    var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?d214947968792b839fd669a4decaaffc";
-    var s = document.getElementsByTagName("script")[0]; 
-    s.parentNode.insertBefore(hm, s);
-  })();
-  </script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement('script')
+  hm.src = 'https://hm.baidu.com/hm.js?d214947968792b839fd669a4decaaffc'
+  var s = document.getElementsByTagName('script')[0]
+  s.parentNode.insertBefore(hm, s)
+})()
+</script>
 </body>
 </html>
 
